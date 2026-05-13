@@ -1,0 +1,12 @@
+{
+  "name": "AuraFlow AI",
+  "description": "Elite AI-powered website generation platform with cinematic design and intelligence features.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI Website Generation",
+    "Real-time Editor",
+    "Cinematic Design System"
+  ]
+}
