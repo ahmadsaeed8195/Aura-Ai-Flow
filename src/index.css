@@ -18,4 +18,7 @@
   .neon-border {
     @apply border-brand-blue/30 shadow-neon;
   }
+  .aurora {
+    @apply absolute rounded-full blur-[120px] opacity-20 pointer-events-none;
+  }
 }

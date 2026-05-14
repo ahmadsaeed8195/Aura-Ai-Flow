@@ -6,8 +6,7 @@ import {
   MessageCircle, 
   Repeat2, 
   Share2, 
-  Search,
-  Sparkles
+  Search
 } from "lucide-react";
 import { cn } from "../lib/utils";
 

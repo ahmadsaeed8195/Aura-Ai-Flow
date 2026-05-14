@@ -28,13 +28,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-8 py-4 h-20 flex items-center",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
           ? "glass border-b border-white/5"
           : "bg-transparent"
       )}
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center justify-between px-8 py-4 h-20">
         {/* Logo */}
         <Link to="/">
           <motion.div
