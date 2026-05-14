@@ -22,7 +22,6 @@ export function LandingPage({ onGenerationComplete }: LandingPageProps) {
       const site = await generateWebsiteFromPrompt(prompt);
       setGeneratedSite(site);
     } catch (error) {
-      console.error(error);
       setIsGenerating(false);
     }
   };

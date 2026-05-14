@@ -141,7 +141,7 @@ export function GenerationOverlay({ isVisible, onComplete }: GenerationOverlayPr
                <div className="space-y-1 h-32 overflow-hidden flex flex-col justify-end">
                   {[...Array(5)].map((_, i) => (
                     <motion.div 
-                      key={i}
+                      key={`log-${i}`}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.1 }}

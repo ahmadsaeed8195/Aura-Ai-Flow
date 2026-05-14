@@ -126,7 +126,7 @@ export default function FeaturesPage() {
                   "Edge-ready Deployment (Vercel/Netlify/CloudRun)"
                 ].map((item, i) => (
                   <motion.li 
-                    key={i}
+                    key={`pipeline-${i}`}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}

@@ -124,12 +124,16 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-white/5">
-                <button className="w-full py-4 text-white font-medium text-center">
-                  Login
-                </button>
-                <button className="w-full py-4 bg-indigo-600 text-white font-bold rounded-xl">
-                  Start Creating
-                </button>
+                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button className="w-full py-4 text-white font-bold uppercase tracking-widest text-[10px] text-center border border-white/10 rounded-2xl">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button className="w-full py-4 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-2xl shadow-xl">
+                    Start Creating
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>

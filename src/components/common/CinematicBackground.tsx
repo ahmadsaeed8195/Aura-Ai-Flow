@@ -46,7 +46,9 @@ function Particles({ count = 200 }) {
   const ref = useRef<THREE.Points>(null!);
   useFrame((state) => {
     const { clock } = state;
-    ref.current.rotation.y = clock.getElapsedTime() * 0.05;
+    if (ref.current) {
+      ref.current.rotation.y = clock.getElapsedTime() * 0.05;
+    }
   });
 
   return (

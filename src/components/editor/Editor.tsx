@@ -201,7 +201,7 @@ export function Editor({ site: initialSite, onExit }: EditorProps) {
                           ? "bg-white/5 border-white/30 text-white" 
                           : "bg-white/5 border-white/5 text-zinc-500 hover:bg-white/10"
                       )}
-                      style={{ fontFamily: f }}
+                      style={{ fontFamily: `'${f}', sans-serif` }}
                     >
                       {f}
                       {site.font === f && <Sparkles size={12} className="text-blue-400" />}

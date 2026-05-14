@@ -37,7 +37,7 @@ export function SiteRenderer({ site, isMobile }: SiteRendererProps) {
   };
 
   return (
-    <div className={`w-full min-h-screen ${getThemeStyles(site.theme)} transition-colors duration-1000 overflow-x-hidden`} style={{ fontFamily: site.font }}>
+    <div className={`w-full min-h-screen ${getThemeStyles(site.theme)} transition-colors duration-1000 overflow-x-hidden`} style={{ fontFamily: `'${site.font}', sans-serif` }}>
       {site.sections.map((section) => {
         const { type, content } = section;
         
@@ -67,7 +67,7 @@ export function SiteRenderer({ site, isMobile }: SiteRendererProps) {
               <section key={section.id} className="py-20 px-8 border-b border-white/5">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {content.features?.map((f: any, i: number) => (
-                    <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group">
+                    <div key={`${f.title}-${i}`} className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all hover:-translate-y-1 group">
                       <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <Sparkles className="text-indigo-400" />
                       </div>
@@ -93,7 +93,7 @@ export function SiteRenderer({ site, isMobile }: SiteRendererProps) {
                     { name: "Enterprise", price: "Custom", features: ["Dedicated Team", "API Access", "Custom Design"] },
                   ]).map((p: any, i: number) => (
                     <div 
-                      key={i} 
+                      key={`${p.name}-${i}`} 
                       className={`p-8 rounded-3xl border ${p.highlighted ? "border-indigo-500 bg-indigo-500/5 ring-4 ring-indigo-500/10" : "border-white/10 bg-white/5"} relative`}
                     >
                       {p.highlighted && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Best Value</div>}
@@ -101,7 +101,7 @@ export function SiteRenderer({ site, isMobile }: SiteRendererProps) {
                       <div className="text-3xl font-extrabold mb-6 transition-all">{p.price}</div>
                       <ul className="space-y-4 mb-8">
                         {p.features?.map((f: string, fi: number) => (
-                          <li key={fi} className="flex items-center gap-3 text-sm opacity-70">
+                          <li key={`${p.name}-feat-${fi}`} className="flex items-center gap-3 text-sm opacity-70">
                             <CheckCircle size={16} className="text-indigo-500" />
                             {f}
                           </li>

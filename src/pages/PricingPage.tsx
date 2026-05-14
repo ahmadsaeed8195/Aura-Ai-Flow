@@ -13,7 +13,8 @@ const plans = [
     button: "Get Started",
     popular: false,
     color: "bg-white/5",
-    accent: "text-gray-400"
+    accent: "text-gray-400",
+    accentBg: "bg-gray-400/10"
   },
   {
     name: "Flux",
@@ -23,7 +24,8 @@ const plans = [
     button: "Upgrade to Flux",
     popular: true,
     color: "bg-blue-600/10",
-    accent: "text-blue-400"
+    accent: "text-blue-400",
+    accentBg: "bg-blue-400/10"
   },
   {
     name: "Nebula",
@@ -33,7 +35,8 @@ const plans = [
     button: "Contact Sales",
     popular: false,
     color: "bg-white/5",
-    accent: "text-violet-400"
+    accent: "text-violet-400",
+    accentBg: "bg-violet-400/10"
   }
 ];
 
@@ -92,7 +95,7 @@ export default function PricingPage() {
               <div className="space-y-4 mb-10">
                 {p.features.map(f => (
                   <div key={f} className="flex items-center gap-3 text-sm font-bold text-gray-300">
-                    <div className={cn("w-5 h-5 rounded-full flex items-center justify-center shrink-0", p.accent.replace('text-', 'bg-') + "/10")}>
+                    <div className={cn("w-5 h-5 rounded-full flex items-center justify-center shrink-0", p.accentBg)}>
                       <Check size={12} className={p.accent} />
                     </div>
                     {f}

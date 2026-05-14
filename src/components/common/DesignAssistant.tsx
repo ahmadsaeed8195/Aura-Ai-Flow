@@ -63,7 +63,7 @@ export function DesignAssistant() {
             <div className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[300px]">
               {messages.map((m, i) => (
                 <div 
-                  key={i} 
+                  key={`${m.role}-${i}`} 
                   className={cn(
                     "max-w-[80%] p-4 rounded-2xl text-sm leading-relaxed",
                     m.role === "ai" 
